@@ -36,5 +36,7 @@ Public Class Form1
 
     Dim imagem As Image
     'Adicionar variavel imagem na estrutura e concatenar o add da imagem ao adicionar elementos no geral
+    
+    ´info(cont) = PictureBox1.Image.Clone()
 
 End Class
