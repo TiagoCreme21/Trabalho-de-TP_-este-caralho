@@ -7,19 +7,20 @@ Public Class Form1
     '''
     'Avançar
     If cont <> info.length() - 1 Then
+        cont = cont + 1
         TextBox1.text = info(cont).nome
         ComboBox1.SelectedItem() = info(cont).escal
         TextBox2.text = info(cont).data.day
         TextBox3.text = info(cont).data.month
         TextBox4.text = info(cont).data.year
         TextBox5.text = info(cont).crs
-        cont = cont + 1
     Else
         MessageBox.Show("ERRO","Encontra-se na última posição do registo.",'''Buttonsda Message Box)
     End If
     'Recuar
     Dim cont As Integer
     If cont <> 0 Then
+        cont = cont - 1
         TextBox1.text = info(cont).nome
         ComboBox1.SelectedItem() = info(cont).escal
         TextBox2.text = info(cont).data.day
@@ -27,7 +28,6 @@ Public Class Form1
         PictureBox1 = info(cont).imagem
         TextBox4.text = info(cont).data.year
         TextBox5.text = info(cont).crs
-        cont = cont - 1
     Else
         MessageBox.Show("ERRO","Encontra-se na primeira posição do registo.",'''Buttons da Message Box)
     End If
